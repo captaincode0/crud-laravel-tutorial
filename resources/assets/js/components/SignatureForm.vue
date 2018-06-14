@@ -17,7 +17,7 @@
 								type="text"
 								placeholder="Your name"
 								class="form-control">
-							<span v-id="errors.name" class="help-block text-danger">{{ errors.name[0] }}</span>
+							<span v-if="errors.name" class="help-block text-danger">{{ errors.name[0] }}</span>
 						</div>
 					</div>
 
@@ -69,7 +69,6 @@
 				}
 			};
 		},
-
 		methods: {
 			onSubmit(){
 				this.saved = false;

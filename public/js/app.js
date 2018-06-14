@@ -43512,7 +43512,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		};
 	},
 
-
 	methods: {
 		onSubmit: function onSubmit() {
 			var _this = this;
@@ -43626,21 +43625,11 @@ var render = function() {
                       }
                     }),
                     _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "id",
-                            rawName: "v-id",
-                            value: _vm.errors.name,
-                            expression: "errors.name"
-                          }
-                        ],
-                        staticClass: "help-block text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.errors.name[0]))]
-                    )
+                    _vm.errors.name
+                      ? _c("span", { staticClass: "help-block text-danger" }, [
+                          _vm._v(_vm._s(_vm.errors.name[0]))
+                        ])
+                      : _vm._e()
                   ]
                 )
               ]),
